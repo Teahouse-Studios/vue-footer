@@ -4,28 +4,14 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ExLink: typeof import('./src/components/ExLink.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     TFooter: typeof import('./src/components/TFooter.vue')['default']
-    THeader: typeof import('./src/components/THeader.vue')['default']
     VApp: typeof import('vuetify/components')['VApp']
-    VAppBar: typeof import('vuetify/components')['VAppBar']
     VBtn: typeof import('vuetify/components')['VBtn']
-    VCard: typeof import('vuetify/components')['VCard']
-    VCarousel: typeof import('vuetify/components')['VCarousel']
-    VCarouselItem: typeof import('vuetify/components')['VCarouselItem']
     VCol: typeof import('vuetify/components')['VCol']
     VContainer: typeof import('vuetify/components')['VContainer']
-    VDivider: typeof import('vuetify/components')['VDivider']
-    VFadeTransition: typeof import('vuetify/components')['VFadeTransition']
     VFooter: typeof import('vuetify/components')['VFooter']
     VIcon: typeof import('vuetify/components')['VIcon']
-    VMain: typeof import('vuetify/components')['VMain']
-    VProgressCircular: typeof import('vuetify/components')['VProgressCircular']
     VRow: typeof import('vuetify/components')['VRow']
-    VSpacer: typeof import('vuetify/components')['VSpacer']
-    VToolbarTitle: typeof import('vuetify/components')['VToolbarTitle']
   }
 }
 

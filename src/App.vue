@@ -1,3 +1,6 @@
-<template><router-view></router-view></template>
-
-<!-- Please refer to @/layouts/ fro the actual layout files -->
+<template>
+  <t-footer />
+</template>
+<script setup lang="ts">
+import TFooter from '@/components/TFooter.vue'
+</script>

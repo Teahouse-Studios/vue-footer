@@ -19,10 +19,10 @@ jobs:
       - name: Build
         run: yarn build
       - name: Upload
-        uses: Teahouse-Studios/aliyun-oss-action@0.6
+        uses: Teahouse-Studios/aliyun-oss-action@0.7
         with:
           KEY_ID: ${{ secrets.KEY_ID }}
           KEY_SECRET: ${{ secrets.KEY_SECRET }}
-          BUCKET: web-teahouse-team
+          BUCKET: frontend-wdljt
           LOCAL_PATH: ./dist/
-          
+          REMOTE_PREFIX: t-footer/

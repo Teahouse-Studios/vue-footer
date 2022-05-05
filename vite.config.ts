@@ -2,11 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import components from 'unplugin-vue-components/vite'
 import { Vuetify3Resolver } from 'unplugin-vue-components/resolvers'
-import prism from 'markdown-it-prism'
-import markdown, { meta } from 'vite-plugin-md'
 import visualizer from 'rollup-plugin-visualizer'
-import pages from 'vite-plugin-pages'
-import layouts from 'vite-plugin-vue-layouts'
 
 const path = require('path')
 
@@ -17,24 +13,9 @@ export default defineConfig({
       reactivityTransform: true,
       include: [/\.vue$/, /\.md$/],
     }),
-    markdown({
-      markdownItUses: [prism],
-      builders: [
-        meta({
-          routeProps: ['layout'],
-        }),
-      ],
-    }),
     components({
       resolvers: [Vuetify3Resolver()],
-      extensions: ['vue', 'md'],
-    }),
-    layouts({
-      layoutsDirs: 'src/layouts',
-      defaultLayout: 'default',
-    }),
-    pages({
-      extensions: ['vue', 'md'],
+      extensions: ['vue'],
     }),
     visualizer(),
   ],
@@ -42,6 +23,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`,
+      },
     },
   },
   /* remove the need to specify .vue files https://vitejs.dev/config/#resolve-extensions
