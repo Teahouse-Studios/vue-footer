@@ -95,7 +95,7 @@
           class="text-center text-md-right pt-5 d-flex flex-column align-center align-md-end justify-end"
         >
           <div>
-            <router-link to="/" title="首页">
+            <a herf="https://teahouse.team/" title="首页">
               <img
                 src="https://story-cdn.teahouse.team/t-footer/assets/logo.svg"
                 alt="Teahouse Studios"
@@ -103,7 +103,7 @@
                 class="mx-auto ml-md-auto mr-md-0"
                 style="filter: invert(1)"
               />
-            </router-link>
+            </a>
             <div class="text-body-2 copyright">
               <p>
                 <a
