@@ -97,7 +97,7 @@
           <div>
             <router-link to="/" title="首页">
               <img
-                src="@/assets/logo.svg"
+                src="https://story-cdn.teahouse.team/t-footer/assets/logo.svg"
                 alt="Teahouse Studios"
                 height="48"
                 class="mx-auto ml-md-auto mr-md-0"
